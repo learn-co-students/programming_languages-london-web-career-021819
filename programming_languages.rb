@@ -34,11 +34,14 @@ languages = {
 
 
 def reformat_languages(languages)
-  new_hash = {} #build a new hash
+  #build a new hash and equate it to an empty array
+   new_array = []
+
   languages.each do |style, data| #style: oo, functional. data: hash
     binding.pry
 
-    data.each do |lang_name, describe| #lang_name: ruby, etc. describe: hash
+    data.each do |lang_name, describe|
+      binding.pry
 
        if new_hash[lang_name] == nil
           new_hash[lang_name] = describe
